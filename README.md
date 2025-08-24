@@ -1,45 +1,58 @@
-##Predicting Gene Expression from Sparse Genome-Wide SNP Data
+# Predicting Gene Expression from Sparse Genome-Wide SNP Data  
 
-This project explores large-scale machine learning approaches to predict gene expression directly from genotype information.
+This project explores **large-scale machine learning approaches** to predict gene expression directly from **genotype information**.  
 
-##Introduction
+---
 
-We analyzed millions of SNPs obtained through whole-genome sequencing (WGS) to estimate gene expression levels. Because SNP datasets are typically sparse, we tested four machine learning methods that are well-suited for high-dimensional data: Ridge regression, Lasso regression, Elastic Net (ENET), and Random Forest. To improve prediction performance, we also compared models with and without filtering SNP predictors based on their genomic distance to the target gene and their correlation with expression.
+## 📖 Introduction  
 
-##Dataset
+We analyzed millions of SNPs obtained through **whole-genome sequencing (WGS)** to estimate gene expression levels.  
 
-The analysis used data from the Geuvadis Consortium, which includes 462 unrelated human lymphoblastoid cell line samples representing five populations from the 1000 Genomes Project:
+Because SNP datasets are typically **sparse and high-dimensional**, we tested four machine learning methods:  
+- Ridge Regression  
+- Lasso Regression  
+- Elastic Net (ENET)  
+- Random Forest  
 
-CEPH (CEU)
+To improve prediction performance, models were compared **with and without SNP filtering**, based on:  
+- Genomic distance to the target gene  
+- Correlation with target gene expression  
 
-Finns (FIN)
+---
 
-British (GBR)
+## 📊 Dataset  
 
-Toscani (TSI)
+The analysis used data from the **Geuvadis Consortium**, which includes **462 unrelated human lymphoblastoid cell line (LCL) samples** from the [1000 Genomes Project](https://www.internationalgenome.org/).  
 
-Yoruba (YRI)
+### Populations  
+- CEPH (**CEU**)  
+- Finns (**FIN**)  
+- British (**GBR**)  
+- Toscani (**TSI**)  
+- Yoruba (**YRI**)  
 
-Details of the dataset:
+### Dataset Details  
+- **mRNA expression data**: 462 samples  
+- **miRNA expression data**: 452 samples  
+- **Genotype data**: 421 individuals from Phase 1 + 41 from Phase 2 of 1000 Genomes  
 
-mRNA expression data: 462 samples
+---
 
-miRNA expression data: 452 samples
+## 📂 Data Structure  
 
-Genotype data: 421 samples from 1000 Genomes Phase 1 and 41 from Phase 2
+- **Gene Expression**: RPKM (*Reads Per Kilobase of transcript per Million mapped reads*)  
+- **Genotypes**: VCF (*Variant Call Format*)  
 
-##Data Structure
+---
 
-Expression data: RPKM (Reads Per Kilobase of transcript per Million mapped reads)
+## 🔗 Data Access  
 
-Genotypes: VCF (Variant Call Format)
+Data were downloaded from the **European Bioinformatics Institute (EMBL-EBI)**:  
 
-Data Access
+- **Gene Expression (RPKM)**  
+  [GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz (86.6 MB)](https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/analysis_results/)  
 
-Data were downloaded from the European Bioinformatics Institute (EMBL-EBI):
+- **Genotypes (Chromosomes 1–22, ~44.6 GB)**  
+  [VCF Files](https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/genotypes/)  
 
-Gene expression files:
-GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz (86.6 MB)
-
-Genotype files (Chromosomes 1–22, total size ~44.6 GB):
-VCF Files
+---
