@@ -1,44 +1,45 @@
-# Gene Expression Prediction Using a sparse Genome-Wide SNP Dataset
-Work on large-scale Machine Learning for gene expression prediction based on genotype only.
+##Predicting Gene Expression from Sparse Genome-Wide SNP Data
 
-# Introduction
-In this work, we used millions of SNPs identified by whole-genome sequencing (WGS) to predict gene expression. Due to the sparsity of existing SNP datasets, we applied four regularized regression methods—Ridge, Lasso, Elastic Net (ENET), and Random Forest—combined with or without predictor (SNP) filtering by proximity to and correlation with the expression of the target gene.
+This project explores large-scale machine learning approaches to predict gene expression directly from genotype information.
 
-# Dataset
-Geuvadis consortium data set of 462 unrelated human lymphoblastoid cell line samples from 5 populations from the 1000 Genomes project.
-*	CEPH (CEU), Finns (FIN), British (GBR), Toscani (TSI) and Yoruba (YRI)
-*	462 individuals with mRNA and 452 individuals with miRNA data
-*	421 in the 1000 Genomes Phase 1 dataset + 41 in Phase 2
+##Introduction
 
-Dataset format RPKM and VCF file:
-*	Gene Expression: RPKM – Reads Per Kilobase Million
-*	Genotypes: VCF – Variant Call Format
+We analyzed millions of SNPs obtained through whole-genome sequencing (WGS) to estimate gene expression levels. Because SNP datasets are typically sparse, we tested four machine learning methods that are well-suited for high-dimensional data: Ridge regression, Lasso regression, Elastic Net (ENET), and Random Forest. To improve prediction performance, we also compared models with and without filtering SNP predictors based on their genomic distance to the target gene and their correlation with expression.
 
+##Dataset
 
-The EMBL-EBI European Bioinformatics Institute webpage.
+The analysis used data from the Geuvadis Consortium, which includes 462 unrelated human lymphoblastoid cell line samples representing five populations from the 1000 Genomes Project:
 
-Link: https://www.ebi.ac.uk
+CEPH (CEU)
 
-Downloaded Files:
-* GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz (86.6 MB)
+Finns (FIN)
 
-https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/analysis_results/
+British (GBR)
 
-* Chromosome 1-22 (44.61 GB)
+Toscani (TSI)
 
-https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/genotypes/
+Yoruba (YRI)
 
+Details of the dataset:
 
+mRNA expression data: 462 samples
 
-# Work Environment
-Rstudio: Version 1.1.463
+miRNA expression data: 452 samples
 
-R Language: R version 3.5.2 (2018-12-20)
+Genotype data: 421 samples from 1000 Genomes Phase 1 and 41 from Phase 2
 
-Link: https://www.rstudio.com/products/rstudio/download/
+##Data Structure
 
-Used packages:
-* Read VCF files: {vcfR}
-* Benjamini-Hochberg: p.adjust {stats v. 3.5.2}
-* Ridge, Lasso, Enet: glmnet {glmnet v. 2.0-16}
-* Random Forest: randomForest {randomForest v. 4.6-14}
+Expression data: RPKM (Reads Per Kilobase of transcript per Million mapped reads)
+
+Genotypes: VCF (Variant Call Format)
+
+Data Access
+
+Data were downloaded from the European Bioinformatics Institute (EMBL-EBI):
+
+Gene expression files:
+GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz (86.6 MB)
+
+Genotype files (Chromosomes 1–22, total size ~44.6 GB):
+VCF Files
