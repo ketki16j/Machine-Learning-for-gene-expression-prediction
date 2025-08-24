@@ -49,10 +49,8 @@ The analysis used data from the **Geuvadis Consortium**, which includes **462 un
 
 Data were downloaded from the **European Bioinformatics Institute (EMBL-EBI)**:  
 
-- **Gene Expression (RPKM)**  
-  [GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz (86.6 MB)](https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/analysis_results/)  
 
-- **Genotypes (Chromosomes 1–22, ~44.6 GB)**  
-  [VCF Files](https://www.ebi.ac.uk/arrayexpress/experiments/E-GEUV-1/files/genotypes/)  
+
+-
 
 ---
