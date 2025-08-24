@@ -2,6 +2,8 @@
 
 This project explores **large-scale machine learning approaches** to predict gene expression directly from **genotype information**.  
 
+<img width="1536" height="1024" alt="ChatGPT Image Aug 24, 2025, 06_50_51 PM" src="https://github.com/user-attachments/assets/1224ac21-90cc-44ad-bb24-8a9b3d932ae7" />
+
 ---
 
 ## 📖 Introduction  
