@@ -2,11 +2,11 @@ install.packages("qqman")
 library(qqman)
 
 ### MSE
-sim_1_mse <- read.table("/home/lffraga/Results_Data/linear_mse.txt")
-sim_2a_mse <- read.table("/home/lffraga/Results_Data/simulation2a_1mb_mse_7.txt")
-sim_2b_mse <- read.table("/home/lffraga/Results_Data/simulation2b_1mb_mse_7.txt")
-sim_3a_mse <- read.table("/home/lffraga/Results_Data/simulation3a_mse_7.txt")
-sim_3b_mse <- read.table("/home/lffraga/Results_Data/simulation3b_mse_7.txt")
+sim_1_mse <- read.table("/home//Results_Data/linear_mse.txt")
+sim_2a_mse <- read.table("/home//Results_Data/simulation2a_1mb_mse_7.txt")
+sim_2b_mse <- read.table("/home/Results_Data/simulation2b_1mb_mse_7.txt")
+sim_3a_mse <- read.table("/home/Results_Data/simulation3a_mse_7.txt")
+sim_3b_mse <- read.table("/home/Results_Data/simulation3b_mse_7.txt")
 
 colnames(sim_2a_mse) <- c("Ridge", "Lasso", "ENET", "RF")
 colnames(sim_2b_mse) <- c("Ridge", "Lasso", "ENET", "RF")
