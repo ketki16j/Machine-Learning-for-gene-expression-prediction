@@ -2,9 +2,9 @@ library(randomForest)
 #library(gbm)
 
 ### Load the dataset
-BH_gene <- read.table("/home/lffraga/Table Data/BH_gene21.txt")
-BH_passed_snp <- read.table("/home/lffraga/Table Data/all_snps.txt")
-snps <- read.table("/home/lffraga//Table Data/all_inf.txt")
+BH_gene <- read.table("/home/Table Data/BH_gene21.txt")
+BH_passed_snp <- read.table("/home/Table Data/all_snps.txt")
+snps <- read.table("/home/Table Data/all_inf.txt")
 
 snp_log1 <- t(snps)
 
