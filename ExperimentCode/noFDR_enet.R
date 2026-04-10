@@ -5,9 +5,9 @@ library(randomForest)
 library(caret)
 
 ### Load the dataset
-BH_gene <- read.table("/home/lffraga/Table Data/BH_gene6.txt")
-BH_passed_snp <- read.table("/home/lffraga/Table Data/BH_passed_snps6.txt")
-snps <- read.table("/home/lffraga/Table Data/snp_inf6.txt")
+BH_gene <- read.table("/home/Table Data/BH_gene6.txt")
+BH_passed_snp <- read.table("/home/Table Data/BH_passed_snps6.txt")
+snps <- read.table("/home/Table Data/snp_inf6.txt")
 
 snp_log1 <- t(snps)
 
