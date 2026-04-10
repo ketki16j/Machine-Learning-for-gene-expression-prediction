@@ -1,9 +1,9 @@
 library(randomForest)
 
 ### Load the dataset
-BH_gene <- read.table("/home/lffraga/Table Data/BH_gene6.txt")
-BH_passed_snp <- read.table("/home/lffraga/Table Data/all_snps.txt")
-snps <- read.table("/home/lffraga/Table Data/all_inf.txt")
+BH_gene <- read.table("/home/kxj190026/Table Data/BH_gene6.txt")
+BH_passed_snp <- read.table("/home/kxj190026/Table Data/all_snps.txt")
+snps <- read.table("/home/kxj190026/Table Data/all_inf.txt")
 
 snp_log1 <- t(snps)
 kfold <- 5 # Dataset K-fold CrossValidation
