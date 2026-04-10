@@ -3,9 +3,9 @@ library(glmnet)
 library(caret)
 #library(gbm)
 
-BH_gene <- read.table("/home/lffraga/Table Data/BH_gene21.txt")
-BH_passed_snp <- read.table("/home/lffraga/Table Data/BH_passed_snps21b.txt")
-snps <- read.table("/home/lffraga/Table Data/snp_inf21.txt")
+BH_gene <- read.table("/home/Table Data/BH_gene21.txt")
+BH_passed_snp <- read.table("/home/Table Data/BH_passed_snps21b.txt")
+snps <- read.table("/home/Table Data/snp_inf21.txt")
 
 snp_log1 <- t(snps)
 
