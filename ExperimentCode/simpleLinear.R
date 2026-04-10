@@ -7,8 +7,7 @@ snp_log1 <- t(snps)
 
 kfold <- 5 # Dataset K-fold CrossValidation
 k <- 5 # Iteration K-repetitions
-#folds <- scan("/home/lffraga/Table Data/folds.txt")
-#folds <- sample(cut(seq(1,nrow(BH_gene)),breaks=kfold,labels=FALSE))
+
 
 start <- Sys.time()
 
@@ -104,4 +103,4 @@ sd(as.numeric(l_sl_mse_log1))
 sd(as.numeric(l_sl_rsq_log1))
 
 write.table(l_sl_mse_log1, "/linear_mse_68.txt")
-write.table(l_sl_rsq_log1, "/home/lffraga/Results_Data/linear_rsq_68.txt")
+write.table(l_sl_rsq_log1, "/Results_Data/linear_rsq_68.txt")
