@@ -3,12 +3,12 @@ library(glmnet)
 library(caret)
 #library(gbm)
 
-BH_gene <- read.table("/home/lffraga/Table Data/BH_gene6.txt")
-BH_passed_snp <- read.table("/home/lffraga/Table Data/all_snps.txt")
-snps <- read.table("/home/lffraga/Table Data/all_inf.txt")
+BH_gene <- read.table("/home/Table Data/BH_gene6.txt")
+BH_passed_snp <- read.table("/home/Table Data/all_snps.txt")
+snps <- read.table("/home/Table Data/all_inf.txt")
 
-folds <- scan("/home/lffraga/Table Data/folds.txt")
-genes68 <- scan("/home/lffraga/Table Data/genes68.txt")
+folds <- scan("/home/Table Data/folds.txt")
+genes68 <- scan("/home/Table Data/genes68.txt")
 
 snp_log1 <- t(snps)
 
